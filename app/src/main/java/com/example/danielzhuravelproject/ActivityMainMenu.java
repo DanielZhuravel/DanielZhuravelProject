@@ -28,4 +28,19 @@ public class ActivityMainMenu extends AppCompatActivity {
         Intent i=new Intent(this,ActivitySummaries.class);
         startActivity(i);
     }
+
+    public void toChat(View view) {
+        Intent i=new Intent(this,ActivityChat.class);
+        startActivity(i);
+    }
+
+    public void toSettings(View view) {
+        Intent i=new Intent(this,ActivitySettings.class);
+        startActivity(i);
+    }
+
+    public void toGrades(View view) {
+        Intent i=new Intent(this,ActivityGrades.class);
+        startActivity(i);
+    }
 }

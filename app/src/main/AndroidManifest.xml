@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivitySummaries"></activity>
+        <activity android:name=".ActivityTasks"></activity>
+        <activity android:name=".ActivityTests" />
+        <activity android:name=".ActivityGrades" />
+        <activity android:name=".ActivityHomeWork" />
+        <activity android:name=".ActivitySettings" />
+        <activity android:name=".ActivityChat" />
+        <activity android:name=".ActivitySummaries" />
         <activity android:name=".ActivityCalendar" />
         <activity android:name=".ActivitySubjects" />
         <activity android:name=".ActivitySchedule" />

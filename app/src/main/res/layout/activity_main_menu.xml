@@ -10,11 +10,11 @@
         android:id="@+id/btnSchedule"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="140dp"
         android:onClick="toSchedule"
         android:text="Schedule"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,27 +39,27 @@
         android:text="Chat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnSummaries"
-        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toStartOf="@+id/btnSummaries"
         app:layout_constraintTop_toBottomOf="@+id/btnSummaries"
-        app:layout_constraintVertical_bias="0.167" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnSummaries"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:onClick="toSummaries"
         android:text="Summaries"
-        app:layout_constraintEnd_toEndOf="@+id/btnCalendar"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="@+id/btnCalendar"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalendar" />
+        app:layout_constraintEnd_toEndOf="@+id/btnGrades"
+        app:layout_constraintStart_toStartOf="@+id/btnGrades"
+        app:layout_constraintTop_toBottomOf="@+id/btnGrades" />
 
     <Button
         android:id="@+id/btnSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="toSettings"
         android:text="Settings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,4 +67,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
+
+    <Button
+        android:id="@+id/btnGrades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:onClick="toGrades"
+        android:text="Grades"
+        app:layout_constraintEnd_toEndOf="@+id/btnCalendar"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/btnCalendar"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalendar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
