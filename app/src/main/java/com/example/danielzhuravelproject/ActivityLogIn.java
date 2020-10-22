@@ -2,7 +2,9 @@ package com.example.danielzhuravelproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class ActivityLogIn extends AppCompatActivity {
 
@@ -10,5 +12,10 @@ public class ActivityLogIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
+    }
+
+    public void toMainMenu(View view) {
+        Intent i=new Intent(this,ActivityMainMenu.class);
+        startActivity(i);
     }
 }
