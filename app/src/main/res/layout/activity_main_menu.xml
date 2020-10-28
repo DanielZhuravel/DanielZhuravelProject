@@ -4,79 +4,158 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
     tools:context=".ActivityMainMenu">
 
-    <Button
+    <ImageButton
         android:id="@+id/btnSchedule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_width="95dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="44dp"
+        android:background="@android:color/holo_blue_dark"
         android:onClick="toSchedule"
+        android:scaleType="centerCrop"
+        android:src="@drawable/schedule_img"
         android:text="Schedule"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMainMenu" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnCalendar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_width="91dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginEnd="52dp"
+        android:background="@android:color/holo_blue_dark"
         android:onClick="toCalendar"
+        android:scaleType="centerCrop"
+        android:src="@drawable/calendar_img"
         android:text="Calendar"
-        app:layout_constraintEnd_toEndOf="@+id/btnSchedule"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/btnSchedule"
-        app:layout_constraintTop_toBottomOf="@+id/btnSchedule" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toEndOf="@+id/btnSchedule"
+        app:layout_constraintTop_toTopOf="@+id/btnSchedule" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnChat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_width="95dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="116dp"
+        android:background="@android:color/holo_blue_dark"
         android:onClick="toChat"
+        android:scaleType="centerCrop"
+        android:src="@drawable/chat_img"
         android:text="Chat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnSummaries"
-        app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toStartOf="@+id/btnSummaries"
-        app:layout_constraintTop_toBottomOf="@+id/btnSummaries"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="@+id/btnGrades"
+        app:layout_constraintTop_toTopOf="@+id/btnGrades"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnSummaries"
+        android:layout_width="95dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="188dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="toSummaries"
+        android:scaleType="centerCrop"
+        android:src="@drawable/summaries_img"
+        android:text="Summaries"
+        app:layout_constraintEnd_toEndOf="@+id/btnCalendar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnCalendar"
+        app:layout_constraintTop_toTopOf="@+id/btnCalendar" />
+
+    <ImageButton
+        android:id="@+id/btnSettings"
+        android:layout_width="57dp"
+        android:layout_height="58dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="toSettings"
+        android:scaleType="centerCrop"
+        android:src="@drawable/settings_img"
+        android:text="Settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <ImageButton
+        android:id="@+id/btnGrades"
+        android:layout_width="95dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="104dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="toGrades"
+        android:scaleType="centerCrop"
+        android:src="@drawable/grades_img"
+        android:text="Grades"
+        app:layout_constraintStart_toStartOf="@+id/btnSchedule"
+        app:layout_constraintTop_toBottomOf="@+id/btnSchedule" />
+
+    <TextView
+        android:id="@+id/tvMainMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:gravity="center"
+        android:text="Main Menu"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSchedule"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:onClick="toSummaries"
+        android:layout_marginTop="12dp"
+        android:text="Class Scedule"
+        app:layout_constraintEnd_toEndOf="@+id/btnSchedule"
+        app:layout_constraintStart_toStartOf="@+id/btnSchedule"
+        app:layout_constraintTop_toBottomOf="@+id/btnSchedule" />
+
+    <TextView
+        android:id="@+id/tvCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calendar"
+        app:layout_constraintEnd_toEndOf="@+id/btnCalendar"
+        app:layout_constraintStart_toStartOf="@+id/btnCalendar"
+        tools:layout_editor_absoluteY="291dp" />
+
+    <TextView
+        android:id="@+id/tvSummaries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Summaries"
+        app:layout_constraintEnd_toEndOf="@+id/btnSummaries"
+        app:layout_constraintStart_toStartOf="@+id/btnSummaries"
+        app:layout_constraintTop_toBottomOf="@+id/btnSummaries" />
+
+    <TextView
+        android:id="@+id/tvGrades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Grades"
         app:layout_constraintEnd_toEndOf="@+id/btnGrades"
         app:layout_constraintStart_toStartOf="@+id/btnGrades"
         app:layout_constraintTop_toBottomOf="@+id/btnGrades" />
 
-    <Button
-        android:id="@+id/btnSettings"
+    <TextView
+        android:id="@+id/tvChat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="toSettings"
-        android:text="Settings"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        android:text="Chat"
+        app:layout_constraintEnd_toEndOf="@+id/btnChat"
+        app:layout_constraintStart_toStartOf="@+id/btnChat"
+        app:layout_constraintTop_toBottomOf="@+id/btnChat" />
 
-    <Button
-        android:id="@+id/btnGrades"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:onClick="toGrades"
-        android:text="Grades"
-        app:layout_constraintEnd_toEndOf="@+id/btnCalendar"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="@+id/btnCalendar"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalendar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btnMainMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="216dp"
+        android:layout_marginTop="92dp"
         android:onClick="toMainMenu"
         android:text="Main Menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSchoolChedule" />
 
     <Button
         android:id="@+id/btnLogIn"
@@ -41,5 +42,19 @@
         app:layout_constraintStart_toStartOf="@+id/btnLogIn"
         app:layout_constraintTop_toBottomOf="@+id/btnLogIn"
         app:layout_constraintVertical_bias="0.289" />
+
+    <TextView
+        android:id="@+id/tvSchoolChedule"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_marginTop="88dp"
+        android:background="#D6D5D5"
+        android:gravity="center"
+        android:text="School Schedule"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
