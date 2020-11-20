@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
     tools:context=".ActivitySchedule">
 
     <Button
@@ -13,7 +14,51 @@
         android:onClick="toSubjects"
         android:text="Subjects"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tblSchedule"
+        app:layout_constraintStart_toStartOf="@+id/tblSchedule"
+        app:layout_constraintTop_toBottomOf="@+id/tblSchedule" />
+
+    <TableLayout
+        android:id="@+id/tblSchedule"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="36dp"
+        android:background="@android:drawable/btn_default"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSchedule">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tvSchedule"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="84dp"
+        android:background="#D6D5D5"
+        android:gravity="center"
+        android:text="Schedule"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

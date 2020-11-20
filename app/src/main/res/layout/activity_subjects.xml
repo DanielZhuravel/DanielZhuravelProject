@@ -4,42 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
     tools:context=".ActivitySubjects">
 
-    <Button
-        android:id="@+id/btnGrades"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+    <ImageButton
+        android:id="@+id/fromSubjectstoGrades"
+        android:layout_width="80dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/holo_blue_dark"
         android:onClick="toGrades"
+        android:scaleType="fitCenter"
+        android:src="@drawable/grades_img"
         android:text="Grades"
         app:layout_constraintEnd_toEndOf="@+id/btnHomeWork"
-        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="@+id/btnHomeWork"
-        app:layout_constraintTop_toBottomOf="@+id/btnHomeWork" />
+        app:layout_constraintTop_toBottomOf="@+id/HomeWork" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnHomeWork"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="52dp"
+        android:background="@android:color/holo_blue_dark"
         android:onClick="toHomeWork"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hw_img"
         android:text="Home Work"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtitleMainMenu" />
+
+    <ImageButton
+        android:id="@+id/btnFromSubjectsToSummaries"
+        android:layout_width="116dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="toSummaries"
+        android:scaleType="fitCenter"
+        android:src="@drawable/summaries_img"
+        android:text="Summaries"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fromSubjectstoGrades"
+        app:layout_constraintStart_toStartOf="@+id/fromSubjectstoGrades"
+        app:layout_constraintTop_toBottomOf="@+id/tvGradesfromSubjects"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <TextView
+        android:id="@+id/tvtitleSubjects"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="76dp"
+        android:background="#D6D5D5"
+        android:gravity="center"
+        android:text="Subjects"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnFromSubjectsToSummaries"
+    <TextView
+        android:id="@+id/HomeWork"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:onClick="toSummaries"
+        android:layout_marginTop="8dp"
+        android:text="Homework"
+        app:layout_constraintEnd_toEndOf="@+id/btnHomeWork"
+        app:layout_constraintStart_toStartOf="@+id/btnHomeWork"
+        app:layout_constraintTop_toBottomOf="@+id/btnHomeWork" />
+
+    <TextView
+        android:id="@+id/tvGradesfromSubjects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Grades"
+        app:layout_constraintEnd_toEndOf="@+id/fromSubjectstoGrades"
+        app:layout_constraintStart_toStartOf="@+id/fromSubjectstoGrades"
+        app:layout_constraintTop_toBottomOf="@+id/fromSubjectstoGrades" />
+
+    <TextView
+        android:id="@+id/tvSummariesfromSubjects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Summaries"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnGrades"
-        app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toStartOf="@+id/btnGrades"
-        app:layout_constraintTop_toBottomOf="@+id/btnGrades"
-        app:layout_constraintVertical_bias="0.071" />
+        app:layout_constraintEnd_toEndOf="@+id/btnFromSubjectsToSummaries"
+        app:layout_constraintStart_toStartOf="@+id/btnFromSubjectsToSummaries"
+        app:layout_constraintTop_toBottomOf="@+id/btnFromSubjectsToSummaries" />
 </androidx.constraintlayout.widget.ConstraintLayout>
