@@ -4,6 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityChat">
+    android:background="@android:color/holo_blue_dark"
+    tools:context=".ActivityHomeWork">
+
+    <TextView
+        android:id="@+id/tvtitleHomework"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="76dp"
+        android:background="#D6D5D5"
+        android:gravity="center"
+        android:text="Chat"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:layout_width="278dp"
+        android:layout_height="390dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvtitleHomework"
+        app:layout_constraintStart_toStartOf="@+id/tvtitleHomework"
+        app:layout_constraintTop_toBottomOf="@+id/tvtitleHomework" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Type a message..."
+        app:layout_constraintEnd_toEndOf="@+id/_dynamic"
+        app:layout_constraintStart_toStartOf="@+id/_dynamic"
+        app:layout_constraintTop_toBottomOf="@+id/_dynamic" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Send"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,17 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityCalendar">
+    android:background="@android:color/holo_blue_dark"
+    tools:context=".ActivityHomeWork">
+
+    <TextView
+        android:id="@+id/tvtitleCalendar"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="76dp"
+        android:background="#D6D5D5"
+        android:gravity="center"
+        android:text="Calendar"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnTests"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:onClick="toTests"
         android:text="Tests"
         app:layout_constraintEnd_toEndOf="@+id/calendarView"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="@+id/calendarView"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
@@ -22,21 +38,18 @@
         android:id="@+id/btnTasks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
         android:onClick="toTasks"
         android:text="Tasks"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnTests"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btnTests"
-        app:layout_constraintTop_toBottomOf="@+id/btnTests"
-        app:layout_constraintVertical_bias="0.277" />
+        app:layout_constraintEnd_toStartOf="@+id/btnTests"
+        app:layout_constraintTop_toTopOf="@+id/btnTests" />
 
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvtitleHomework"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvtitleCalendar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

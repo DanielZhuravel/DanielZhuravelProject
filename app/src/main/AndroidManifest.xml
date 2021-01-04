@@ -20,14 +20,15 @@
         <activity android:name=".ActivitySubjects" />
         <activity android:name=".ActivitySchedule" />
         <activity android:name=".ActivitySignUp" />
-        <activity android:name=".ActivityLogIn" />
+        <activity android:name=".ActivityLogIn" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter> </activity>
         <activity android:name=".ActivityMainMenu" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

@@ -38,22 +38,6 @@
         app:layout_constraintTop_toTopOf="@+id/btnSchedule" />
 
     <ImageButton
-        android:id="@+id/btnChat"
-        android:layout_width="70dp"
-        android:layout_height="75dp"
-        android:layout_marginBottom="116dp"
-        android:background="@android:color/holo_blue_dark"
-        android:onClick="toChat"
-        android:scaleType="fitCenter"
-        android:src="@drawable/chat_img"
-        android:text="Chat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnSummaries"
-        app:layout_constraintStart_toEndOf="@+id/fromSubjectstoGrades"
-        app:layout_constraintTop_toBottomOf="@+id/tvGrades"
-        app:layout_constraintVertical_bias="0.628" />
-
-    <ImageButton
         android:id="@+id/btnSummaries"
         android:layout_width="70dp"
         android:layout_height="68dp"
@@ -70,19 +54,19 @@
 
     <ImageButton
         android:id="@+id/btnSettings"
-        android:layout_width="57dp"
-        android:layout_height="58dp"
+        android:layout_width="46dp"
+        android:layout_height="49dp"
         android:background="@android:color/holo_blue_dark"
         android:onClick="toSettings"
-        android:scaleType="centerCrop"
+        android:scaleType="fitCenter"
         android:src="@drawable/settings_img"
         android:text="Settings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <ImageButton
         android:id="@+id/fromSubjectstoGrades"
@@ -103,7 +87,7 @@
         android:id="@+id/tvtitleMainMenu"
         android:layout_width="0dp"
         android:layout_height="88dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="76dp"
         android:background="#D6D5D5"
         android:gravity="center"
         android:text="Main Menu"
@@ -153,16 +137,5 @@
         app:layout_constraintEnd_toEndOf="@+id/fromSubjectstoGrades"
         app:layout_constraintStart_toStartOf="@+id/fromSubjectstoGrades"
         app:layout_constraintTop_toBottomOf="@+id/fromSubjectstoGrades" />
-
-    <TextView
-        android:id="@+id/tvChat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Chat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnChat"
-        app:layout_constraintStart_toStartOf="@+id/btnChat"
-        app:layout_constraintTop_toBottomOf="@+id/btnChat"
-        app:layout_constraintVertical_bias="0.072" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
