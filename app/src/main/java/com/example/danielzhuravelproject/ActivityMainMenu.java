@@ -43,4 +43,9 @@ public class ActivityMainMenu extends AppCompatActivity {
         Intent i=new Intent(this,ActivityGrades.class);
         startActivity(i);
     }
+
+    public void toHomeWork(View view) {
+        Intent i=new Intent(this,ActivityHomeWork.class);
+        startActivity(i);
+    }
 }

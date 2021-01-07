@@ -7,6 +7,16 @@
     android:background="@android:color/holo_blue_dark"
     tools:context=".ActivityHomeWork">
 
+    <ListView
+        android:id="@+id/listViewGrades"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtitleGrades" />
+
     <TextView
         android:id="@+id/tvtitleGrades"
         android:layout_width="0dp"
@@ -22,9 +32,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <GridView
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
