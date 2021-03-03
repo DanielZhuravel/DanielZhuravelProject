@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,16 +12,16 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class GradeAdapter extends ArrayAdapter<Grade> {
+public class ScheduleSubjectAdapter extends ArrayAdapter<ScheduleSubject> {
 
     private Context ctx;
-    private int GradeResourceId;
-    private List<Grade> data;
+    private int ScheduleSubjectResourceId;
+    private List<ScheduleSubject> data;
 
-    public GradeAdapter(@NonNull Context context, int resource, @NonNull List<Grade> objects) {
+    public ScheduleSubjectAdapter(@NonNull Context context, int resource, @NonNull List<ScheduleSubject> objects) {
         super(context, resource, objects);
-        this.ctx = (ActivityGrades) context;
-        this.GradeResourceId = resource;
+        this.ctx = (ActivitySchedule) context;
+        this.ScheduleSubjectResourceId = resource;
         this.data = objects;
 
     }
@@ -35,20 +34,16 @@ public class GradeAdapter extends ArrayAdapter<Grade> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater li = (LayoutInflater) this.ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v = li.inflate(this.GradeResourceId,null);
+        View v = li.inflate(this.ScheduleSubjectResourceId,null);
 
-        Grade g = this.data.get(position);
-        TextView tvsubject = v.findViewById(R.id.tvSubjectname);
-        tvsubject.setText(g.getSubject());
-        TextView tvgrade = v.findViewById(R.id.tvWhatAbout);
-        tvgrade.setText(g.getGrade()+"");
+        ScheduleSubject sb = this.data.get(position);
+        TextView tvsubject = v.findViewById(R.id.tvsubjectName);
+        tvsubject.setText(sb.getName());
+        TextView tvtime = v.findViewById(R.id.tvsubjectNum);
+        tvtime.setText(sb.getTime()+"");
         TextView tvdate = v.findViewById(R.id.tvfromwho);
-        tvdate.setText(g.getDate());
-        ImageView imgSub = v.findViewById(R.id.imageSubject);
-        imgSub.setImageBitmap(g.getImg());
         return v;
 
     }
-
 
 }

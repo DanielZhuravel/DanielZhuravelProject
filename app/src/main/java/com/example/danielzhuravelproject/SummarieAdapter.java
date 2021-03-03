@@ -13,16 +13,15 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class GradeAdapter extends ArrayAdapter<Grade> {
-
+public class SummarieAdapter extends ArrayAdapter<Summarie> {
     private Context ctx;
-    private int GradeResourceId;
-    private List<Grade> data;
+    private int SummarieResourceId;
+    private List<Summarie> data;
 
-    public GradeAdapter(@NonNull Context context, int resource, @NonNull List<Grade> objects) {
+    public SummarieAdapter(@NonNull Context context, int resource, @NonNull List<Summarie> objects) {
         super(context, resource, objects);
-        this.ctx = (ActivityGrades) context;
-        this.GradeResourceId = resource;
+        this.ctx = (ActivitySummaries) context;
+        this.SummarieResourceId = resource;
         this.data = objects;
 
     }
@@ -35,20 +34,16 @@ public class GradeAdapter extends ArrayAdapter<Grade> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater li = (LayoutInflater) this.ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v = li.inflate(this.GradeResourceId,null);
+        View v = li.inflate(this.SummarieResourceId,null);
 
-        Grade g = this.data.get(position);
+        Summarie s = this.data.get(position);
         TextView tvsubject = v.findViewById(R.id.tvSubjectname);
-        tvsubject.setText(g.getSubject());
+        tvsubject.setText(s.getSubject());
         TextView tvgrade = v.findViewById(R.id.tvWhatAbout);
-        tvgrade.setText(g.getGrade()+"");
+        tvgrade.setText(s.getWhatAbout());
         TextView tvdate = v.findViewById(R.id.tvfromwho);
-        tvdate.setText(g.getDate());
-        ImageView imgSub = v.findViewById(R.id.imageSubject);
-        imgSub.setImageBitmap(g.getImg());
+        tvdate.setText(s.getFromWho());
         return v;
 
     }
-
-
 }

@@ -3,6 +3,7 @@ package com.example.danielzhuravelproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
 public class ActivityHomeWork extends AppCompatActivity {
 
@@ -11,4 +12,5 @@ public class ActivityHomeWork extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_work);
     }
+
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_dark"
-    tools:context=".ActivityHomeWork">
+    tools:context=".ActivityTasks">
 
     <TextView
         android:id="@+id/tvtitleHomework"
@@ -21,4 +21,37 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listViewTasks"
+        android:layout_width="409dp"
+        android:layout_height="351dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtitleHomework"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <Button
+        android:id="@+id/brnAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Add Task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/listViewTasks"
+        app:layout_constraintTop_toBottomOf="@+id/listViewTasks" />
+
+    <Button
+        android:id="@+id/deleteTaskbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
+        android:onClick="deleteDoneTasks"
+        android:text="Delete done tasks"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/brnAddTask"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/brnAddTask" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

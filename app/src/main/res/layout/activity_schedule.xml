@@ -11,42 +11,12 @@
         android:id="@+id/btnSubjects"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:onClick="toSubjects"
         android:text="Subjects"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tblSchedule"
-        app:layout_constraintStart_toStartOf="@+id/tblSchedule"
-        app:layout_constraintTop_toBottomOf="@+id/tblSchedule"
-        app:layout_constraintVertical_bias="0.611" />
-
-    <TableLayout
-        android:id="@+id/tblSchedule"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="36dp"
-        android:background="@android:drawable/btn_default"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSchedule">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </TableLayout>
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <TextView
         android:id="@+id/tvSchedule"
@@ -67,10 +37,33 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:onClick="showTodayScheduleAlertDialog"
+        android:text="Edit today's schedule"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/schduleLV" />
+
+    <Spinner
+        android:id="@+id/sp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSchedule" />
+
+    <ListView
+        android:id="@+id/schduleLV"
+        android:layout_width="409dp"
+        android:layout_height="322dp"
         android:layout_marginTop="36dp"
-        android:text="Edit schedule"
-        app:layout_constraintEnd_toEndOf="@+id/tblSchedule"
-        app:layout_constraintStart_toStartOf="@+id/tblSchedule"
-        app:layout_constraintTop_toBottomOf="@+id/tblSchedule" />
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp1"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

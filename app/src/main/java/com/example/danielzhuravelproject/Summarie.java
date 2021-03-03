@@ -4,23 +4,22 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-public class Grade {
+public class Summarie {
     private String subject;
-    private int grade;
-    private String date;
+    private String fromWho;
+    private String whatAbout;
     private Bitmap img;
 
-    public Grade(String subject, int grade, String date,Context context) {
-        this.subject = subject;
-        this.grade = grade;
-        this.date = date;
+    public Summarie(String subject, String fromWho, String whatAbout, Context context) {
+        subject = subject;
+        this.fromWho = fromWho;
+        this.whatAbout = whatAbout;
         if(this.subject == "Math")
         {this.img = BitmapFactory.decodeResource(context.getResources(),R.drawable.math_subject_img);}
         if(this.subject == "English")
         {this.img = BitmapFactory.decodeResource(context.getResources(),R.drawable.english_subject_img);}
         if(this.subject == "PE")
         {this.img = BitmapFactory.decodeResource(context.getResources(),R.drawable.pe_subject_img);}
-
     }
 
     public String getSubject() {
@@ -28,23 +27,23 @@ public class Grade {
     }
 
     public void setSubject(String subject) {
-        this.subject = subject;
+        subject = subject;
     }
 
-    public int getGrade() {
-        return grade;
+    public String getFromWho() {
+        return fromWho;
     }
 
-    public void setGrade(int grade) {
-        this.grade = grade;
+    public void setFromWho(String fromWho) {
+        this.fromWho = fromWho;
     }
 
-    public String getDate() {
-        return date;
+    public String getWhatAbout() {
+        return whatAbout;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setWhatAbout(String whatAbout) {
+        this.whatAbout = whatAbout;
     }
 
     public Bitmap getImg() {
