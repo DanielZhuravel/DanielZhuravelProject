@@ -151,6 +151,32 @@ public class Dal extends SQLiteAssetHelper {
         return u;
     }
 
+    public User getUserByID(int userid){
+        String st = "SELECT * FROM users WHERE id = "+userid;
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.rawQuery(st, null);
+        cursor.moveToNext();
+        User u = new User();
+        u.setId(cursor.getInt(cursor.getColumnIndex("id")));
+        u.setUsername(cursor.getString(cursor.getColumnIndex("name")));
+        u.setEmail(cursor.getString(cursor.getColumnIndex("email")));
+        u.setPassword(cursor.getString(cursor.getColumnIndex("password")));
+
+        return u;
+    }
+
+    public void updateUserProfile(String name, String email, String password, int userid){
+        String st = "UPDATE users SET name = ?, email = ?, password = ? WHERE id = "+userid;
+        SQLiteDatabase db = getWritableDatabase();
+        SQLiteStatement statement = db.compileStatement(st);
+
+        statement.bindString(1, name);
+        statement.bindString(2, email);
+        statement.bindString(3, password);
+
+        statement.execute();
+    }
+
     public void addSchedule(int dayNum, int hourNum, String subject){
         User u = new User();
         String st = "INSERT INTO users (dayName ,hourNum ,subject) values(?,?,?) WHERE userid = "+u.getId()+"'";
