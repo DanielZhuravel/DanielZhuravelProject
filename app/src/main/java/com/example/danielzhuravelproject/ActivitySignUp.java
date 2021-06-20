@@ -31,6 +31,12 @@ public class ActivitySignUp extends AppCompatActivity {
 
         Toast.makeText(this, "User name: " + strname + "\nE-mail: " + stremail + "\nPassword: " + strpassword, Toast.LENGTH_SHORT).show();
 
+        Dal dal = new Dal(this);
+        dal.addUser(strname,stremail,strpassword);
+        User u = dal.getUserByName(strname);
+        dal.addDeafultSchedule(u.getId());
+
+
         Intent i=new Intent(this,ActivityMainMenu.class);
         startActivity(i);
     }

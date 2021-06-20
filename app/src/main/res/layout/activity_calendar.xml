@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_dark"
-    tools:context=".ActivityHomeWork">
+    tools:context=".ActivityCalendar">
 
     <TextView
         android:id="@+id/tvtitleCalendar"
@@ -27,10 +27,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="toTests"
+        android:onClick="showTestAlertDialog"
         android:text="Tests"
         app:layout_constraintEnd_toEndOf="@+id/calendarView"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/calendarView"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
@@ -38,11 +38,11 @@
         android:id="@+id/btnTasks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="44dp"
         android:onClick="toTasks"
         android:text="Tasks"
-        app:layout_constraintEnd_toStartOf="@+id/btnTests"
-        app:layout_constraintTop_toTopOf="@+id/btnTests" />
+        app:layout_constraintEnd_toStartOf="@+id/addTest"
+        app:layout_constraintTop_toTopOf="@+id/addTest" />
 
     <CalendarView
         android:id="@+id/calendarView"
@@ -52,4 +52,14 @@
         app:layout_constraintEnd_toEndOf="@+id/tvtitleHomework"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvtitleCalendar" />
+
+    <Button
+        android:id="@+id/addTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:onClick="addTest"
+        android:text="Add Test"
+        app:layout_constraintEnd_toStartOf="@+id/btnTests"
+        app:layout_constraintTop_toTopOf="@+id/btnTests" />
 </androidx.constraintlayout.widget.ConstraintLayout>

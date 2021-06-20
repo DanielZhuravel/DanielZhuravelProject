@@ -9,19 +9,22 @@
         android:id="@+id/tvWhatAbout"
         android:layout_width="93dp"
         android:layout_height="37dp"
-        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
         android:text="What about?"
-        app:layout_constraintBottom_toBottomOf="@+id/tvfromwho"
-        app:layout_constraintStart_toEndOf="@+id/tvSubjectname"
+        app:layout_constraintBottom_toBottomOf="@+id/imageSubject"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvSubjectname"
-        app:layout_constraintVertical_bias="0.508" />
+        app:layout_constraintVertical_bias="0.492" />
 
     <TextView
         android:id="@+id/tvSubjectname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="52dp"
         android:text="Subject"
+        app:layout_constraintEnd_toStartOf="@+id/tvWhatAbout"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageSubject"
         app:layout_constraintTop_toTopOf="@+id/imageSubject" />
 
@@ -38,13 +41,13 @@
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
-        android:id="@+id/tvfromwho"
+        android:id="@+id/fromWho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="60dp"
-        android:text="Date"
+        android:layout_marginTop="4dp"
+        android:text="From who"
+        app:layout_constraintEnd_toEndOf="@+id/tvSubjectname"
         app:layout_constraintStart_toStartOf="@+id/tvSubjectname"
-        app:layout_constraintTop_toBottomOf="@+id/tvSubjectname" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWhatAbout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

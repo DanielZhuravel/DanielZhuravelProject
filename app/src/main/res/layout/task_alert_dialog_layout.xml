@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/subjectTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="what's the task's subject?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/subjectET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Subject name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/subjectTV"
+        app:layout_constraintStart_toStartOf="@+id/subjectTV"
+        app:layout_constraintTop_toBottomOf="@+id/subjectTV" />
+
+    <TextView
+        android:id="@+id/contextTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="What do you got to do?"
+        app:layout_constraintEnd_toEndOf="@+id/subjectET"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/subjectET"
+        app:layout_constraintTop_toBottomOf="@+id/subjectET" />
+
+    <EditText
+        android:id="@+id/contextET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="What to do?"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/contextTV"
+        app:layout_constraintStart_toStartOf="@+id/contextTV"
+        app:layout_constraintTop_toBottomOf="@+id/contextTV" />
+
+    <TextView
+        android:id="@+id/dueDateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Due to what day?"
+        app:layout_constraintEnd_toEndOf="@+id/contextET"
+        app:layout_constraintStart_toStartOf="@+id/contextET"
+        app:layout_constraintTop_toBottomOf="@+id/contextET" />
+
+    <EditText
+        android:id="@+id/dueDateET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Due date"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/dueDateTV"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/dueDateTV"
+        app:layout_constraintTop_toBottomOf="@+id/dueDateTV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

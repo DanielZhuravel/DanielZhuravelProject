@@ -33,9 +33,17 @@ public class ActivityLogIn extends AppCompatActivity {
         String strName = name.getText().toString();
         String strPassword = password.getText().toString();
 
-        Toast.makeText(this, "User name: " + strName + "\nPassword: " + strPassword, Toast.LENGTH_SHORT).show();
+        Dal dal = new Dal(this);
+        if(dal.userIsExists(strName,strPassword)){
+            Toast.makeText(this, "User name: " + strName + "\nPassword: " + strPassword, Toast.LENGTH_SHORT).show();
 
-        Intent i=new Intent(this,ActivityMainMenu.class);
-        startActivity(i);
+            Intent i=new Intent(this,ActivityMainMenu.class);
+            i.putExtra("userid", dal.getUserByName(strName).getId());
+            startActivity(i);
+        }
+        else Toast.makeText(this, "User name or Password are incorrect", Toast.LENGTH_SHORT).show();
+
+
     }
+
 }

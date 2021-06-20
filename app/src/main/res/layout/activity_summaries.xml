@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_dark"
-    tools:context=".ActivityHomeWork">
+    tools:context=".ActivitySummaries">
 
     <TextView
-        android:id="@+id/tvtitleHomework"
+        android:id="@+id/tvtitleSummaries"
         android:layout_width="0dp"
         android:layout_height="88dp"
         android:layout_marginTop="76dp"
@@ -29,8 +29,19 @@
         android:layout_marginTop="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvtitleHomework"
-        app:layout_constraintVertical_bias="0.097" />
+        app:layout_constraintTop_toBottomOf="@+id/tvtitleSummaries"
+        app:layout_constraintVertical_bias="0.087" />
+
+    <Button
+        android:id="@+id/btnaddSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:onClick="ToaddSummary"
+        android:text="Add Summary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/listViewSummaries"
+        app:layout_constraintStart_toStartOf="@+id/listViewSummaries" />
 </androidx.constraintlayout.widget.ConstraintLayout>

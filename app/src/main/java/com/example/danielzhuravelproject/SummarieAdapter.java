@@ -1,6 +1,7 @@
 package com.example.danielzhuravelproject;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,8 +42,10 @@ public class SummarieAdapter extends ArrayAdapter<Summarie> {
         tvsubject.setText(s.getSubject());
         TextView tvgrade = v.findViewById(R.id.tvWhatAbout);
         tvgrade.setText(s.getWhatAbout());
-        TextView tvdate = v.findViewById(R.id.tvfromwho);
-        tvdate.setText(s.getFromWho());
+        ImageView imgV = v.findViewById(R.id.imageSubject);
+        imgV.setImageBitmap(BitmapFactory.decodeByteArray(s.getImg(),0,s.getImg().length));
+        TextView fromwho = v.findViewById(R.id.fromWho);
+        fromwho.setText(s.getFromWho());
         return v;
 
     }

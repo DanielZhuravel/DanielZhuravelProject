@@ -1,6 +1,7 @@
 package com.example.danielzhuravelproject;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,7 +46,8 @@ public class GradeAdapter extends ArrayAdapter<Grade> {
         TextView tvdate = v.findViewById(R.id.tvfromwho);
         tvdate.setText(g.getDate());
         ImageView imgSub = v.findViewById(R.id.imageSubject);
-        imgSub.setImageBitmap(g.getImg());
+        imgSub.setImageBitmap(BitmapFactory.decodeByteArray(g.getImg(),0,g.getImg().length));
+
         return v;
 
     }

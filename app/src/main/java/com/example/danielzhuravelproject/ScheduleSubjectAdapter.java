@@ -40,7 +40,7 @@ public class ScheduleSubjectAdapter extends ArrayAdapter<ScheduleSubject> {
         TextView tvsubject = v.findViewById(R.id.tvsubjectName);
         tvsubject.setText(sb.getName());
         TextView tvtime = v.findViewById(R.id.tvsubjectNum);
-        tvtime.setText(sb.getTime()+"");
+        tvtime.setText(sb.getTime() + sb.getName());
         TextView tvdate = v.findViewById(R.id.tvfromwho);
         return v;
 

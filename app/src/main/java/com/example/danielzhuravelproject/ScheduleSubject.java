@@ -26,6 +26,9 @@ public class ScheduleSubject {
         this.name = name;
     }
 
+    public ScheduleSubject() {
+    }
+
     public int getHourNum() {
         return hourNum;
     }
@@ -41,4 +44,5 @@ public class ScheduleSubject {
     public void setName(String name) {
         this.name = name;
     }
+
 }

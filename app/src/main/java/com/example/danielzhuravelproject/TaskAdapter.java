@@ -1,11 +1,13 @@
 package com.example.danielzhuravelproject;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,8 +39,16 @@ public class TaskAdapter extends ArrayAdapter<Task> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater li = (LayoutInflater) this.ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = li.inflate(this.TaskResourceId,null);
+        final Task t = this.data.get(position);
+        final CheckBox cb = v.findViewById(R.id.checkBoxDone);
+        cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                t.setCheckBox(cb.isChecked());
+            }
+        });
 
-        Task t = this.data.get(position);
+
         TextView tvsubject = v.findViewById(R.id.tvSubjectname);
         tvsubject.setText(t.getSubject());
         TextView tvgrade = v.findViewById(R.id.tvTaskTodo);
@@ -46,7 +56,7 @@ public class TaskAdapter extends ArrayAdapter<Task> {
         TextView tvdate = v.findViewById(R.id.tvdueDate);
         tvdate.setText(t.getDueDate());
         ImageView imgSub = v.findViewById(R.id.imageSubject);
-        imgSub.setImageBitmap(t.getSubjectimg());
+        imgSub.setImageBitmap(BitmapFactory.decodeByteArray(t.getSubjectimg(),0,t.getSubjectimg().length));
         return v;
 
     }
