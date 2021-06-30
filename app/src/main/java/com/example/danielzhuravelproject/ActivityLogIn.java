@@ -35,8 +35,6 @@ public class ActivityLogIn extends AppCompatActivity {
 
         Dal dal = new Dal(this);
         if(dal.userIsExists(strName,strPassword)){
-            Toast.makeText(this, "User name: " + strName + "\nPassword: " + strPassword, Toast.LENGTH_SHORT).show();
-
             Intent i=new Intent(this,ActivityMainMenu.class);
             i.putExtra("userid", dal.getUserByName(strName).getId());
             startActivity(i);

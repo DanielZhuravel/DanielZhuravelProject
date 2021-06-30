@@ -18,8 +18,8 @@ public class Dal extends SQLiteAssetHelper {
     }
 
     public void addUser(String name, String email, String password){ //מוסיפה משתמש לטבלה
-        SQLiteDatabase db = getWritableDatabase();
         String sql_INSERT = "INSERT INTO users (name ,email ,password) values(?,?,?)";
+        SQLiteDatabase db = getWritableDatabase();
         SQLiteStatement statment = db.compileStatement(sql_INSERT);
 
         statment.bindString(1, name);
@@ -106,7 +106,7 @@ public class Dal extends SQLiteAssetHelper {
             Task t = new Task();
             t.setSubject(cursor.getString(cursor.getColumnIndex("subject")));
             t.setTaskTodo(cursor.getString(cursor.getColumnIndex("context")));
-                t.setCheckBox(true);
+                t.setCheckBox(false);
             t.setDueDate(cursor.getString(cursor.getColumnIndex("dueDate")));
             t.setSubjectimg(cursor.getBlob(cursor.getColumnIndex("img")));
             t.setTaskID(cursor.getInt(cursor.getColumnIndex("taskid")));
@@ -197,6 +197,7 @@ public class Dal extends SQLiteAssetHelper {
         ScheduleSubject s = new ScheduleSubject();
         ArrayList<ScheduleSubject> arr = new ArrayList<>();
         while(cursor.moveToNext()){
+            s = new ScheduleSubject();
             s.setHourNum(cursor.getInt(cursor.getColumnIndex("hourNum")));
             s.setName(cursor.getString(cursor.getColumnIndex("subject")));
 

@@ -24,19 +24,20 @@
 
     <ListView
         android:id="@+id/listViewTasks"
-        android:layout_width="409dp"
-        android:layout_height="351dp"
-        android:layout_marginBottom="28dp"
+        android:layout_width="match_parent"
+        android:layout_height="297dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toTopOf="@+id/brnAddTask"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtitleHomework" />
 
     <Button
         android:id="@+id/brnAddTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="8dp"
         android:onClick="addTask"
         android:text="Add Task"
         app:layout_constraintBottom_toTopOf="@+id/deleteTaskbtn"
@@ -47,7 +48,7 @@
         android:id="@+id/deleteTaskbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="28dp"
         android:onClick="deleteDoneTasks"
         android:text="Delete done tasks"
         app:layout_constraintBottom_toBottomOf="parent"

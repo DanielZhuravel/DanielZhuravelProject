@@ -29,8 +29,6 @@ public class ActivitySignUp extends AppCompatActivity {
         String stremail = email.getText().toString();
         String strpassword = password.getText().toString();
 
-        Toast.makeText(this, "User name: " + strname + "\nE-mail: " + stremail + "\nPassword: " + strpassword, Toast.LENGTH_SHORT).show();
-
         Dal dal = new Dal(this);
         dal.addUser(strname,stremail,strpassword);
         User u = dal.getUserByName(strname);
@@ -38,6 +36,7 @@ public class ActivitySignUp extends AppCompatActivity {
 
 
         Intent i=new Intent(this,ActivityMainMenu.class);
+        i.putExtra("userid", dal.getUserByName(strname).getId());
         startActivity(i);
     }
 }

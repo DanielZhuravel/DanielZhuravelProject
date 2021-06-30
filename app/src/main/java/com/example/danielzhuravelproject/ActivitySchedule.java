@@ -22,7 +22,6 @@ public class ActivitySchedule extends AppCompatActivity implements AdapterView.O
 
     Spinner sp;
     int day;
-    ArrayList<ArrayList<ScheduleSubject>> schedules;
     ListView list;
     Dal dal;
 
@@ -41,27 +40,15 @@ public class ActivitySchedule extends AppCompatActivity implements AdapterView.O
 
         sp.setOnItemSelectedListener(this);
 
-        schedules = new ArrayList<>();
-        schedules.add(new ArrayList<ScheduleSubject>());
-        schedules.add(new ArrayList<ScheduleSubject>());
-        schedules.add(new ArrayList<ScheduleSubject>());
-        schedules.add(new ArrayList<ScheduleSubject>());
-        schedules.add(new ArrayList<ScheduleSubject>());
-        schedules.add(new ArrayList<ScheduleSubject>());
-
         list = findViewById(R.id.schduleLV);
 
         dal = new Dal(this);
 
+        sp.setSelection(getDayNum() - 1);
         updateList(sp.getSelectedItemPosition());
 
-        Toast.makeText(this, ""+sp.getSelectedItemPosition(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, ""+getDayNum(), Toast.LENGTH_SHORT).show();
 
-    }
-
-    public void toSubjects(View view) {
-        Intent i=new Intent(this,ActivitySubjects.class);
-        startActivity(i);
     }
 
     public int getDayNum(){
@@ -101,9 +88,8 @@ public class ActivitySchedule extends AppCompatActivity implements AdapterView.O
         builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                schedules.get(day).clear();
                 EditText et = inflater.findViewById(R.id.firstLesson);
-                int day = sp.getSelectedItemPosition();
+                int day = sp.getSelectedItemPosition()+1;
                 if(et.getText()!=null)
                     dal.updateScheduleSubject(day, 1, getIntent().getIntExtra("userid",0), et.getText().toString());
                 else dal.updateScheduleSubject(day, 1, getIntent().getIntExtra("userid",0), "");
@@ -140,7 +126,7 @@ public class ActivitySchedule extends AppCompatActivity implements AdapterView.O
                     dal.updateScheduleSubject(day, 9, getIntent().getIntExtra("userid",0), et.getText().toString());
                 else dal.updateScheduleSubject(day, 9, getIntent().getIntExtra("userid",0), "");
 
-                updateList(day);
+                updateList(day-1);
             }
         });
         builder.setNegativeButton("Cancel", null);
@@ -170,7 +156,7 @@ public class ActivitySchedule extends AppCompatActivity implements AdapterView.O
     }
 
     public void updateList(int pos){
-        ScheduleSubjectAdapter sba = new ScheduleSubjectAdapter(this,R.layout.schedule_subject,dal.getDayschedule(pos, getIntent().getIntExtra("userid",0)));
+        ScheduleSubjectAdapter sba = new ScheduleSubjectAdapter(this,R.layout.schedule_subject,dal.getDayschedule(pos+1, getIntent().getIntExtra("userid",0)));
         list.setAdapter(sba);
     }
 }
